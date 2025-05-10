@@ -21,9 +21,10 @@
     "@nx/eslint": "21.0.3",
     "@nx/next": "21.0.3",
     "eslint": "~8.57.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^16.0.0",
     "nx": "21.0.3",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.3",
-    "husky": "^8.0.0"
+    "typescript": "^5.8.3"
   }
 }
