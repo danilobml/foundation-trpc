@@ -4,13 +4,26 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier \"{apps,libs}/**/*.{ts,tsx,js,json}\" --ignore-path .gitignore",
+    "format:check": "pnpm format --check",
+    "format:write": "pnpm format --write",
+    "build": "pnpm exec nx run-many --target=build",
+    "tsc": "pnpm exec nx run-many --target=tsc",
+    "lint": "pnpm exec nx run-many --target=lint",
+    "validate": "pnpm format:write && pnpm tsc && pnpm lint && pnpm build",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.10.0",
   "devDependencies": {
-    "typescript": "^5.8.3"
+    "@nx/eslint": "21.0.3",
+    "@nx/next": "21.0.3",
+    "eslint": "~8.57.0",
+    "nx": "21.0.3",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "husky": "^8.0.0"
   }
 }
